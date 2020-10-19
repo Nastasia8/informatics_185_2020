@@ -7,7 +7,7 @@ void perimetr(float a, float b, float c, float d) {
 	cout << "It's perimetr of your trapezoid:  " << a + b + c + d << endl;
 }
 // perimetr of your circle 
-void perimetr(pi, float r) {
+void perimetr(float pi, float r) {
 	cout << "That's perimetr of your circle: " << 2 * pi * r << endl;
 }
 
@@ -21,7 +21,7 @@ void area(float a, float b, float h) {
 	cout << "It's area of your trapezoid: " << ((a + b) / 2) * h << endl; 
 }
 // area of your circle 
-void area(pi, float r) {
+void area(float pi, float r) {
 	cout << "It's area of your circle: " << pi * pow(r, 2) << endl; 
 }
 

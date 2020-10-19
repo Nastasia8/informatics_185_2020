@@ -11,7 +11,7 @@ float length_vector(float x, float y, float z) {
 }
 
 // calculation length of a unit vector 
-float unit_vector(float length1, float x, float y, float z) {
+void unit_vector(float length1, float x, float y, float z) {
 	cout << "That's coordinates of your unit vector: ";
 	cout << "(" << x / length1 << "," << y / length1 << "," << z / length1 << ")" << endl;
 }

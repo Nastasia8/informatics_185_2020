@@ -23,18 +23,14 @@ float perimeter(int a)
 //трапеция
 float area(int a, int b, int h)
 {
-    return ((a+b)*h) / 2);
+    return ((a+b)*h) / 2 ;
 }
-//square
-int squareArea(int a)
+//square and circle
+float area(int a)
 {
-    return a*a;
+    return a*a * 3.14f;;
 }
 
-double area(double a)
-{
-    return (a*a) * 3.14f;
-}
 
 int main()
 {
@@ -60,10 +56,9 @@ int main()
     cout << "Периметр Круга " << perimeter(1, 2, 3, 4) << endl;
     cout << "Периметр Квадрата " << perimeter(2) << endl;
     //Задание 2.2
-    cout << "Площадь трапеции" << area(1, 2) << endl;
-    cout << "Площадь круга" << area(2) << endl;
-    cout << "Площадь квадрата" << squareArea(3) << endl;
+    cout << "Площадь трапеции " << area(1, 2, 3) << endl;
+    cout << "Площадь круга " << area(2) << endl;
+    cout << "Площадь квадрата " << area(2) / 3.14f << endl;
     return 0;
-    
 }
 

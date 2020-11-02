@@ -16,7 +16,7 @@ void findMax(int ** arr, int rows, int cols, int *_arrMax)
         }
     }
     cout << "Maxs: ";
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < rows; i++)
     {
         cout << _arrMax[i] << " ";
     }
@@ -29,7 +29,6 @@ int main()
     cout << "Cols:";
     cin >> cols;
     int max[3] = {-1000, -1000, -1000};
-    //int result[3] = {};
     srand(time(NULL));
 
     //Создание указателя на массив указателей

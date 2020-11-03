@@ -1,0 +1,3 @@
+﻿  work2.cpp
+C:\Users\ilyan\Documents\GitHub\informatics_185_2020\work2\work2\work2.cpp(14,16): warning C4305: инициализация: усечение из "double" в "float"
+  work2.vcxproj -> C:\Users\ilyan\Documents\GitHub\informatics_185_2020\work2\Debug\work2.exe

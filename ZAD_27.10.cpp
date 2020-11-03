@@ -27,7 +27,7 @@ for  ( int i=0; i < rows; i++){
    }
     
     }
-cout << "максимум из всех элементов = " << n <<endl;
+cout << "maximum of all elements = " << n <<endl;
 n=0;
 }
 void f4 (int rows,int col,int n, int **massiv,int *arr){
@@ -39,7 +39,7 @@ for  ( int i=0; i < rows; i++){
        }
        
    }
-    cout << "максимум из строки = " << n <<endl;
+    cout << "maximum from string = " << n <<endl;
     arr[i]=n;
        n=0;
     }
@@ -75,7 +75,7 @@ f3( rows, col,n,massiv);
 f4 (rows, col,n,massiv,arr);
 
 cout <<endl;
-cout << "массив с максимальными значениями --> " <<endl;
+cout << "array with maximum values --> " <<endl;
 
 f5 ( rows, arr);
 

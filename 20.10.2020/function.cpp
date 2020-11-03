@@ -15,9 +15,9 @@ int function(const float a, const float b, const float xn, const float xk, const
     return 0;
 }
 
-int function(const float a, const float b, int i, const float arr[])
+int function(const float a, const float b, int i, const int ip, const int in, const float arr[])
 {
-    for (i = 0; i != 5; i++)
+    for (i = in; i != ip; i++)
     {
         cout << "For x = " << arr[i] << "  y = " << ((acos(pow(arr[i], 2) - pow(b, 2))) / (asin(pow(arr[i], 2) - pow(a, 2)))) << endl;
     }

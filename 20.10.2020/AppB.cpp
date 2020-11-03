@@ -7,6 +7,6 @@
 
 int main()
 {
-    function(a, b, arr);
+    function(a, b, i, in, ip, arr);
     return 0;
 }

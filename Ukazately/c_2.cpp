@@ -35,6 +35,7 @@ int min_of_arr(int *arr, int n, int &m)
         }
     }
     cout << "min = " << m << endl;
+    return m;
 }
 int main()
 {

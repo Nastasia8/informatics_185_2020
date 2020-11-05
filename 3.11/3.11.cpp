@@ -82,7 +82,7 @@ int main()
     car.Show();
     car1.Show();
     car2.Show();
-    cout << "Pam-param: " << Car::GetAmoung() << endl;
+    cout << "Kol-vo: " << Car::GetAmoung() << endl;
     
     switch(car1.GetState())
     {

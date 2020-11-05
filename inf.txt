@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+   const float exp=2.7;
+   const float a=2.0;
+   const float b=0.95;
+   float x_n=1.25;
+   float x_k=2.75;
+   float y;
+   float x;
+   x = x_n;
+   for(x_n = 1.25;x_n<=x_k;x_n +=0.3)
+   {
+       x = x_n + 0.3;
+      y=1+pow(log10(x/a),2)/b-pow(exp,x/a);
+      cout << " x  ("<< x << ") = " << y << endl;
+   }
+   return 0;
+}

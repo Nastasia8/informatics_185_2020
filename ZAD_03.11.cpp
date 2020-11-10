@@ -8,7 +8,7 @@ enum CarState{
 };
 class Car{
     string brand;
-    string model;
+    string model; 
     int year;
     CarState State;
     static int k;
@@ -45,7 +45,7 @@ class Car{
     this->year=year;}
     static int GetAmong()
     {
-      return k; 
+      return k 
     }
     void Show()
     {

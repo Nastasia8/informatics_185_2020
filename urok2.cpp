@@ -1,0 +1,37 @@
+
+#include <iostream>
+
+using namespace std; 
+
+float Summa (float x, float y)
+{
+float s;
+s=x+y;
+return s;
+}
+float Raznost (float x, float y)
+{
+float r;
+r=x-y;
+return r;
+}
+float Proizvedenie (float x, float y)
+{
+float p;
+p=x*y;
+return p;
+}
+int main()
+{
+    float x; 
+cout << "Vvedite x" << endl;
+cin >> x;
+float y;
+cout << "Vvedite y" << endl;
+cin >> y;
+cout << "Summa= " << Summa (x,y) << endl;
+cout << "Raznost= " << Raznost (x,y) << endl;
+cout << "Proizvedenie= " << Proizvedenie (x,y) << endl;
+
+return 0;
+}

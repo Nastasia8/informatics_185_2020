@@ -12,14 +12,10 @@ public:
 	int year;
 	float arr[3];
 	void GetInfo();
+	float GetAverage();
+	float SetAverage();
 	void Average();
 	void ShowInfo();
 
-	float GetAverage() {
-		return score;
-	}
 
-	float SetAverage(float score) {
-		this->score = score;
-	}
 };

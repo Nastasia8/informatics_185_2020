@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+void summa (float x,float y);
+void raznost (float x,float y);
+void proizvedenie (float x, float y);
+int main()
+{
+
+float x;
+float y;
+    cin >> x;
+    cin >> y;
+    summa(x,y);
+    raznost(x,y);
+    proizvedenie(x,y);
+    cout << "v.proizvedenie = " << << endl;
+    return 0;
+}
+ void summa (float x,float y){
+     cout <<" summa =" << x+y;
+ }
+  void raznost (float x,floaty){
+      cout <<" raznost =" << x-y;
+  }
+  void proizvedenie (float x, float y){
+      cout <<" proizvedenie =" << x*y;
+  }
+      return x+y;
+}

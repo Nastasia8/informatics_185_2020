@@ -1,0 +1,39 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+void Cenal (int k1, float price1){
+    float y;
+
+    y=k1*price1 ;
+
+
+    return y;
+}
+float Summacen (float x1, flaot x2){
+    float z;
+    z=k2*price2;
+}
+int main()
+
+{
+
+
+    int k=5;
+    float price=98.57;
+    float x1;
+    float x2;
+    x1= k1*price1 ;
+    cout << "x= " <<x << endl;
+int k2=9;
+    float price2=38.57;
+    x2= k2*price2 ;
+    cout << "x2= " << x2 << endl;
+    Cena1 (k1,price1);
+    cout << "Cena chokoladok= "<< Cena1 (k1,price1) << endl;
+    z=x1+x2;
+    Summacen (x1,x2);
+    cout << "Summa cen= " << Summacen (x1,x2) << endl;
+    return 0;
+}

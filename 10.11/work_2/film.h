@@ -6,12 +6,14 @@ class Film
 private:
     string name;
     int year;
-    int *arr;
+    int arr[3];
     float sr_mark;
     void setMark();
     void setYear(int year);
+    static void SetMax(int sr_mark);
 
 public:
+    static float count;
     Film()
     {
         cout << "Film's name: ";
@@ -26,3 +28,4 @@ public:
     void show_mark();
     void show_data();
 };
+// float Film::count = 0;

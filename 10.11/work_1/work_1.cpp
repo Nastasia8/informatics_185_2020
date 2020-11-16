@@ -19,6 +19,7 @@ private:
 };
 int main()
 {
+    int row, col;
     cout << "row: ";
     cin >> row;
     cout << endl;
@@ -92,11 +93,11 @@ void Massive::cleaning()
     }
     delete[] arr_tr;
 }
+void Massive::setCol(int col)
+{
+    this->col = col;
+}
 void Massive::setRow(int row)
 {
     this->row = row;
-}
-void Massive::setRow(int col)
-{
-    this->col = col;
 }

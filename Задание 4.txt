@@ -1,11 +1,31 @@
 #include <iostream>
-#include <cmath>
-#include <string>
-using namespace std;
-void main()
-   int i,sum;
-   // 1 sposob
-   sum = 0;
-   for (i=1;i<=100,i++ ) sum +=i;
-   cout << "Summa sposobom 1: "sum << endl;
 
+using namespace std;
+
+void chetdiapozon(int nach, int kon)
+{
+    int sum=0;
+    while (nach <= kon)
+    {
+        if (nach % 2 == 0)
+    {
+        sum = sum + nach;
+    }
+    cout << "Chislo = " << nach << endl;
+    nach ++;
+    }
+    cout << "Sum chet = " << sum << endl;
+}
+
+int main()
+{
+    int nach;
+    cout << "Vvedite nach znach" << endl;
+    cin >> nach;
+    
+    int kon;
+    cout << "Vvedite kon znach" << endl;
+    cin >> kon;
+    
+    chetdiapozon(nach,kon);
+}

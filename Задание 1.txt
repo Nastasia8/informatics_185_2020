@@ -13,7 +13,7 @@ void Cenal (int k1, float price1){
 }
 float Summacen (float x1, flaot x2){
     float z;
-    z=k2*price2;
+    z=x1+x2;
 }
 int main()
 

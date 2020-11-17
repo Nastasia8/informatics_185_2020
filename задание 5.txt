@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+float compilatet(float f,float r)
+{
+ return 2*3.14*sqrt(f/r);
+}
+float compilatet(float m,float f,float r,float p)
+{
+    return 2*3.14*sqrt(f/(f*m*r));
+}
+int main()
+{
+    float f=50;
+    float m=40;
+    float r=5.8;
+    float l=15;
+  cout<< "Tmach=" << compilatet(f,r) << endl;
+  cout<< "Tpr=" << compilatet(m,f,r,l) << endl;
+}

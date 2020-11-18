@@ -4,25 +4,14 @@ using namespace std;
 class Massive
 {
 public:
-    //Конструктор с методом генерации массива
-    Massive()
-    {
-        cout << "row: ";
-        cin >> row;
-        cout << endl;
-        cout << "col: ";
-        cin >> col;
-        cout << endl;
-        this->row = row;
-        this->col = col;
-        generate_massive();
-    }
-    void showMassive(); //вывод массива
-    void trance();      //генерация и вывод транспонированного массива (использую ещё один массив)
-    void cleaning();    //очистка
+    void setCol(int col);    // столбцы
+    void setRow(int row);    // сроки
+    void showMassive();      //вывод массива
+    void trance();           //генерация и вывод транспонированного массива (использую ещё один массив)
+    void cleaning();         //очистка
+    void generate_massive(); //генерация массива
 
 private:
-    void generate_massive(); //генерация массива
     int row;
     int col;
     int **arr;
@@ -30,7 +19,17 @@ private:
 };
 int main()
 {
-    Massive first = Massive();
+    int row, col;
+    cout << "row: ";
+    cin >> row;
+    cout << endl;
+    cout << "col: ";
+    cin >> col;
+    cout << endl;
+    Massive first;
+    first.setRow(row);
+    first.setCol(col);
+    first.generate_massive();
     first.showMassive();
     first.trance();
     first.cleaning();
@@ -39,7 +38,6 @@ int main()
 void Massive::generate_massive()
 {
     srand(time(NULL));
-    int secret = -15 + rand() % 31;
     arr = new int *[row];
     for (int i = 0; i < row; i++)
     {
@@ -49,8 +47,7 @@ void Massive::generate_massive()
     {
         for (int j = 0; j < col; j++)
         {
-            arr[i][j] = secret;
-            secret = -15 + rand() % 31;
+            arr[i][j] = -15 + rand() % 31;
         }
     }
 }
@@ -69,7 +66,7 @@ void Massive::showMassive()
 void Massive::trance()
 {
     arr_tr = new int *[col];
-    for (int i = 0; i < row; i++)
+    for (int i = 0; i < col; i++)
     {
         arr_tr[i] = new int[row];
     }
@@ -95,4 +92,12 @@ void Massive::cleaning()
         delete[] arr_tr[i];
     }
     delete[] arr_tr;
+}
+void Massive::setCol(int col)
+{
+    this->col = col;
+}
+void Massive::setRow(int row)
+{
+    this->row = row;
 }

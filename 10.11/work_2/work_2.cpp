@@ -5,12 +5,12 @@
 using namespace std;
 int main()
 {
-
-    Film the_lord_of_the_rings = Film();
-    the_lord_of_the_rings.show_mark();
-    the_lord_of_the_rings.show_data();
-    Film star_wars = Film();
-    star_wars.show_mark();
-    star_wars.show_data();
+    Film film_1 = Film();
+    film_1.show_mark();
+    film_1.show_data();
+    Film film_2 = Film();
+    film_2.show_mark();
+    film_2.show_data();
+    cout << "max sr mark = " << Film::count;
     return 0;
 }

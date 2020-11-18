@@ -82,6 +82,7 @@ cout <<"Частота "<<w<<endl;
   };
 
 int main() {
+setlocale(LC_ALL, "Russian");
 Math name;
 name.Type();
 name.Period();

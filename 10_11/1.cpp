@@ -11,6 +11,7 @@ public:
     int ** arr;// declare dynamic massive
     void Show1();// creat dynamic array, fill it and show it (show matrix)
     void Show2();// make matrix transposed
+    void Delete();// clear, delete massive and its elements
 
 };
 
@@ -20,6 +21,7 @@ int main() {
     massive.Show1();
     cout << "--------------------------------------------------" << endl;
     massive.Show2();
+    massive.Delete();
     return 0;
 }
 
@@ -57,4 +59,11 @@ void Massive::Show2() {
         cout << endl;
     }
     
+}
+
+void Massive::Delete() {
+	for (int i = 0; i < rows; i++) {
+		delete[] arr[i];
+	}
+	delete[] arr;
 }

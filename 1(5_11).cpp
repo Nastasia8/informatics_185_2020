@@ -27,6 +27,8 @@ int main() {
 	student2.Show();
 	student3.Show();
 	student1.CheckData();
+	student2.CheckData();
+	student3.CheckData();
 	return 0;
 }
 
@@ -48,11 +50,11 @@ void Student::Show() {
 }
 
 void Student::CheckData() {
-	if (Student::age < 0 || Student::group < 0 || Student::course < 0) {
+	if (age < 0 || group < 0 || course < 0) {
 		cout << "You've entered the wrong data";
 	}
-	else if (Student::age < 17) {
-		cout << "You'r not a student cause of your age";
+	else if (age < 17) {
+		cout << name << " you'r not a student cause of your age";
 	}
 
 }

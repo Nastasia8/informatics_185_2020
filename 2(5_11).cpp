@@ -7,14 +7,16 @@ using namespace std;
 
 class Massive {
 
-public:
+private:
 	int rows, col, mini, maxi;
 	int** arr = new int* [rows];
 	int* arr2 = new int[2];
+public:
 	void Fillarr();
 	void Showarr();
 	void Finding(); // find maximum or minimum, then show it
 	void Changearr(); // change all negative elements to 0
+	void Delete();
 
 
 };
@@ -27,6 +29,7 @@ int main() {
 	massive.Finding();
 	massive.Changearr();
 	massive.Showarr();
+	massive.Delete();
 	return 0;
 }
 
@@ -81,4 +84,11 @@ void Massive::Changearr() {
 			}
 		}
 	}
+}
+
+void Massive::Delete() {
+	for (int i = 0; i < rows; i++) {
+		delete[] arr[i];
+	}
+	delete[] arr;
 }

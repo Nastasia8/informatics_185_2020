@@ -19,12 +19,21 @@ void Film::GetInfo() {
 	}
 }
 
+float Film::GetAverage() {
+	return score;
+}
+
+float Film::SetAverage(float score) {
+	this->score = score;
+}
+
 void Film::Average() {
 	for (int i = 0; i < 3; i++) {
 		score += arr[i];
 	}
 	score = round((score / 3) * 10) / 10;
 }
+
 
 void Film::ShowInfo() {
 	cout << "Name of the film: " << name << "\t" << "Release date: " << year << "\t" << "Average viewers score: " << score;

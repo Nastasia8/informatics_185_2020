@@ -8,7 +8,6 @@ using namespace std;
 int main() {
 	Film film1;
 	Film film2;
-	Film film3;
 	film1.GetInfo();
 	film1.Average();
 	film2.GetInfo();

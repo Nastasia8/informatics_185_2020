@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+void summa (float x,float y);
+void raznost (float x,float y);
+void proizvedenie (float x, float y);
+int main()
+{
+
+int n;
+float x;
+float y;
+float z;
+    cin >> x;
+    cin >> y;
+    cout << "enter a number " << endl;
+    cin >> n;
+    switch (n) {
+        case 0:
+        summa (x, y);
+        break;
+        case 1:
+        raznost (x, y);
+        break;
+        case 2:
+        proizvedenie (x, y);
+        break;
+        default:
+        cout << "0, 1, 2" << endl;
+        break;
+    }
+    return 0;
+}

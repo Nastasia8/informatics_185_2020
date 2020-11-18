@@ -12,25 +12,25 @@
   class Fizi4eski: public Maiatnik{
     public:
      void Type()override{
-     cout <<"Òèï ìàÿòíèêà ôèçè÷åñêèé"<<endl;
+     cout <<"Ð¢Ð¸Ð¿ Ð¼Ð°ÑÑ‚Ð½Ð¸ÐºÐ° Ñ„Ð¸Ð·Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹"<<endl;
      }
 void Period()override{
       float T,l,m;
-cout <<endl<<"ââåäèòå äëèíó ";
+cout <<endl<<"Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð»Ð¸Ð½Ñƒ ";
 cin >>l;
-cout <<endl<<"ââåäèòå ìàññó ";
+cout <<endl<<"Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð°ÑÑÑƒ ";
 cin >>m;
 T=2*M_PI*sqrt(l/(9.8*m));
-cout <<"Ïåðèîä "<<T<<endl;
+cout <<"ÐŸÐµÑ€Ð¸Ð¾Ð´ "<<T<<endl;
 }
 void Chastota()override{
       float l,w,S;
-cout <<endl<<"ââåäèòå äëèíó ";
+cout <<endl<<"Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð»Ð¸Ð½Ñƒ ";
 cin >>l;
-cout <<endl<<"ââåäèòå ìàññó ";
+cout <<endl<<"Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð°ÑÑÑƒ ";
 cin >>S;
 w=1/sqrt(l/S);
-cout <<"×àñòîòà "<<w<<endl;
+cout <<"Ð§Ð°ÑÑ‚Ð¾Ñ‚Ð° "<<w<<endl;
 }
 
 
@@ -38,46 +38,46 @@ cout <<"×àñòîòà "<<w<<endl;
   class Math: public Maiatnik{
     public:
 void Type()override{
-  cout <<"Òèï ìàÿòíèêà ìàòåìàòè÷åñêèé"<<endl;
+  cout <<"Ð¢Ð¸Ð¿ Ð¼Ð°ÑÑ‚Ð½Ð¸ÐºÐ° Ð¼Ð°Ñ‚ÐµÐ¼Ð°Ñ‚Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹"<<endl;
      }
 void Period()override{
 float T,l;
-cout <<endl<<"ââåäèòå äëèíó ";
+cout <<endl<<"Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð»Ð¸Ð½Ñƒ ";
 cin >>l;
 T=2*M_PI*sqrt(l/9.8);
-cout <<"Ïåðèîä "<<T<<endl;
+cout <<"ÐŸÐµÑ€Ð¸Ð¾Ð´ "<<T<<endl;
 }
 void Chastota()override{
 float w,l;
-cout <<endl<<"ââåäèòå äëèíó ";
+cout <<endl<<"Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð»Ð¸Ð½Ñƒ ";
 cin >>l;
 w=sqrt(9.8/l);
-cout <<"×àñòîòà "<<w<<endl;
+cout <<"Ð§Ð°ÑÑ‚Ð¾Ñ‚Ð° "<<w<<endl;
 }
   };
 
   class PryIIIina: public Maiatnik{
 public:
   void Type()override{
-       cout <<"Òèï ìàÿòíèêà ïðóæèííûé"<<endl;
+       cout <<"Ð¢Ð¸Ð¿ Ð¼Ð°ÑÑ‚Ð½Ð¸ÐºÐ° Ð¿Ñ€ÑƒÐ¶Ð¸Ð½Ð½Ñ‹Ð¹"<<endl;
      }
 void Period()override{
 float T,m,k;
-cout <<endl<<"ââåäèòå ìàññó ";
+cout <<endl<<"Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð°ÑÑÑƒ ";
 cin >>m;
-cout <<endl<<"ââåäèòå æ¸ñêîñòü ";
+cout <<endl<<"Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¶Ñ‘ÑÐºÐ¾ÑÑ‚ÑŒ ";
 cin >>k;
 T=2*M_PI*sqrt(m/k);
-cout <<"Ïåðèîä "<<T<<endl;
+cout <<"ÐŸÐµÑ€Ð¸Ð¾Ð´ "<<T<<endl;
 }
 void Chastota()override{
 float w,k,m;
-cout <<endl<<"ââåäèòå æåñòêîñòü ";
+cout <<endl<<"Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¶ÐµÑÑ‚ÐºÐ¾ÑÑ‚ÑŒ ";
 cin >>k;
-cout <<endl<<"ââåäèòå ìàññó ";
+cout <<endl<<"Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð°ÑÑÑƒ ";
 cin >>m;
 w=sqrt(k/m);
-cout <<"×àñòîòà "<<w<<endl;
+cout <<"Ð§Ð°ÑÑ‚Ð¾Ñ‚Ð° "<<w<<endl;
 }
   };
 

@@ -1,32 +1,36 @@
 #include <iostream>
-#include <cmath>
-#include <string>
-using namespace std;
 
-void summa (float x,float y);
-void raznost (float x,float y);
-void proizvedenie (float x, float y);
+using namespace std; 
+
+float Summa (float x, float y)
+{
+float s;
+s=x+y;
+return s;
+}
+float Raznost (float x, float y)
+{
+float r;
+r=x-y;
+return r;
+}
+float Proizvedenie (float x, float y)
+{
+float p;
+p=x*y;
+return p;
+}
 int main()
 {
-
-float x;
+    float x; 
+cout << "Vvedite x" << endl;
+cin >> x;
 float y;
-    cin >> x;
-    cin >> y;
-    summa(x,y);
-    raznost(x,y);
-    proizvedenie(x,y);
-    cout << "v.proizvedenie = " << << endl;
-    return 0;
-}
- void summa (float x,float y){
-     cout <<" summa =" << x+y;
- }
-  void raznost (float x,floaty){
-      cout <<" raznost =" << x-y;
-  }
-  void proizvedenie (float x, float y){
-      cout <<" proizvedenie =" << x*y;
-  }
-      return x+y;
+cout << "Vvedite y" << endl;
+cin >> y;
+cout << "Summa= " << Summa (x,y) << endl;
+cout << "Raznost= " << Raznost (x,y) << endl;
+cout << "Proizvedenie= " << Proizvedenie (x,y) << endl;
+
+return 0;
 }

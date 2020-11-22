@@ -26,6 +26,7 @@ int main()
     {
         out << n << endl;
     }
+    out << "Size of vector = " << num.size() << endl;
     out.close();
     return 0;
 }

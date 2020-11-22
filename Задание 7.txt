@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+ 
+void fn(int intArg) {
+    intArg = 10;
+}
+ 
+int main(int nNumberofArgs, char* pszArgs[]) {
+    int n = 0;
+    fn(n);
+    cout << n << endl;
+    system("PAUSE");
+}

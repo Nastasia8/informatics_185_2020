@@ -82,11 +82,12 @@ public:
         {
             stavka = 10;
         }
+        return stavka * v;
     }
     void show() override
     {
         cout << endl;
-        cout << "V of bus: " << v << " л. с." << endl;
+        cout << "V of bus: " << v << " l. s." << endl;
     }
 };
 // Воздушные виды транспорта

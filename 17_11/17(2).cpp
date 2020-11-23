@@ -12,10 +12,10 @@ public:
 class Auto : public Tax {
 private:
 	string Brand;
-	int hp, time1;
-	float price;
+	int hp, owning;
+	float price, time1;
 public:
-	Auto(int p, string b, float pr, int t) : hp(p), Brand(b), price(pr), time1(t) {
+	Auto(int p, string b, float pr, int t, int o) : hp(p), Brand(b), price(pr), time1(t), owning(o) {
 
 	}
 
@@ -54,7 +54,7 @@ public:
 				cout << "Month tax on your car is " << hp * 15 << "\t Brand of your car is " << Brand;
 			}
 		}
-		else if (price > 3 && time1 < 12) {
+		else if (price >= 3 && price <= 5 && time1 < 12 && owning < 12) {
 			if (hp < 100) {
 				cout << "Month tax on your car is " << hp * 2.5 * (time1 / 12) * 1.5 << "\t Brand of your car is " << Brand;
 			}
@@ -71,7 +71,24 @@ public:
 				cout << "Month tax on your car is " << hp * 15 * (time1 / 12) * 1.5 << "\t Brand of your car is " << Brand;
 			}
 		}
-		else {
+		else if (price >= 3 && price <= 5 && owning >= 24 && owning <= 36) {
+			if (hp < 100) {
+				cout << "Month tax on your car is " << hp * 2.5 * 1.1 << "\t Brand of your car is " << Brand;
+			}
+			else if (hp >= 100 && hp <= 150) {
+				cout << "Month tax on your car is " << hp * 3.5 * 1.1 << "\t Brand of your car is " << Brand;
+			}
+			else if (hp > 150 && hp <= 200) {
+				cout << "Month tax on your car is " << hp * 5 * 1.1 << "\t Brand of your car is " << Brand;
+			}
+			else if (hp > 200 && hp <= 250) {
+				cout << "Month tax on your car is " << hp * 7.5 * 1.1 << "\t Brand of your car is " << Brand;
+			}
+			else {
+				cout << "Month tax on your car is " << hp * 15 * 1.1 << "\t Brand of your car is " << Brand;
+			}
+		}
+		else if (price >= 3 && price <= 5 && owning >= 12 && owning <= 24) {
 			if (hp < 100) {
 				cout << "Month tax on your car is " << hp * 2.5 * 1.3 << "\t Brand of your car is " << Brand;
 			}
@@ -88,13 +105,48 @@ public:
 				cout << "Month tax on your car is " << hp * 15 * 1.3 << "\t Brand of your car is " << Brand;
 			}
 		}
+		else if (price >= 5 && price <= 10 && owning <= 60) {
+			if (hp < 100) {
+				cout << "Month tax on your car is " << hp * 2.5 * 2 << "\t Brand of your car is " << Brand;
+			}
+			else if (hp >= 100 && hp <= 150) {
+				cout << "Month tax on your car is " << hp * 3.5 * 2 << "\t Brand of your car is " << Brand;
+			}
+			else if (hp > 150 && hp <= 200) {
+				cout << "Month tax on your car is " << hp * 5 * 2 << "\t Brand of your car is " << Brand;
+			}
+			else if (hp > 200 && hp <= 250) {
+				cout << "Month tax on your car is " << hp * 7.5 * 2 << "\t Brand of your car is " << Brand;
+			}
+			else {
+				cout << "Month tax on your car is " << hp * 15 * 2 << "\t Brand of your car is " << Brand;
+			}
+		}
+		else  { // calculate tax if price is more than 15 million or between 10 and 15 million and no older than 20 years
+			if (hp < 100) {
+				cout << "Month tax on your car is " << hp * 2.5 * 3 << "\t Brand of your car is " << Brand;
+			}
+			else if (hp >= 100 && hp <= 150) {
+				cout << "Month tax on your car is " << hp * 3.5 * 3 << "\t Brand of your car is " << Brand;
+			}
+			else if (hp > 150 && hp <= 200) {
+				cout << "Month tax on your car is " << hp * 5 * 3 << "\t Brand of your car is " << Brand;
+			}
+			else if (hp > 200 && hp <= 250) {
+				cout << "Month tax on your car is " << hp * 7.5 * 3 << "\t Brand of your car is " << Brand;
+			}
+			else {
+				cout << "Month tax on your car is " << hp * 15 * 3 << "\t Brand of your car is " << Brand;
+			}
+		}
 		cout << endl;
 	}
 };
 
 class Bus : public Tax {
 private:
-	int hp, number, time1;
+	int hp, number;
+	float time1;
 public:
 	Bus(int p, int n, int t) : hp(p), number(n), time1(t) {
 
@@ -123,7 +175,8 @@ public:
 
 class Motorcycle : public Tax {
 private:
-	int hp, wheels, time1;
+	int hp, wheels;
+	float time1;
 public:
 	Motorcycle(int p, int w, int t) : hp(p), wheels(w), time1(t) {
 

@@ -8,6 +8,7 @@ void zapolnenieAndShow (int **, int ,int  );
 
 
 int main (){
+    srand(time(NULL));
     int rows,cols;
      cout  << "Rows: " ;
     cin >> rows;

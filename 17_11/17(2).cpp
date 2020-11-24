@@ -22,19 +22,19 @@ public:
 	void Calculation() override {
 		if (price < 3 && time1 < 12) {
 			if (hp < 100) {
-				cout << "Month tax on your car is " << round((hp * 2.5 * (time1 / 12)) * 10) / 100 << "\t Brand of your car is " << Brand;
+				cout << "Month tax on your car is " << hp * 2.5 * (time1 / 12) << "\t Brand of your car is " << Brand;
 			}
 			else if (hp >= 100 && hp <= 150) {
-				cout << "Month tax on your car is " << round((hp * 3.5 * (time1 / 12)) * 10) / 100 << "\t Brand of your car is " << Brand;
+				cout << "Month tax on your car is " << hp * 3.5 * (time1 / 12) << "\t Brand of your car is " << Brand;
 			}
 			else if (hp > 150 && hp <= 200) {
-				cout << "Month tax on your car is " << round((hp * 5 * (time1 / 12)) * 10) / 100 << "\t Brand of your car is " << Brand;
+				cout << "Month tax on your car is " << hp * 5 * (time1 / 12) << "\t Brand of your car is " << Brand;
 			}
 			else if (hp > 200 && hp <= 250) {
-				cout << "Month tax on your car is " << round((hp * 7.5 * (time1 / 12)) * 10) / 100 << "\t Brand of your car is " << Brand;
+				cout << "Month tax on your car is " << hp * 7.5 * (time1 / 12) << "\t Brand of your car is " << Brand;
 			}
 			else {
-				cout << "Month tax on your car is " << round((hp * 15 * (time1 / 12)) * 10) / 100 << "\t Brand of your car is " << Brand;
+				cout << "Month tax on your car is " << hp * 15 * (time1 / 12) << "\t Brand of your car is " << Brand;
 			}
 		}
 		else if (price < 3 && time1 >= 12) {
@@ -155,10 +155,10 @@ public:
 	void Calculation() override {
 		if (time1 < 12) {
 			if (hp <= 200) {
-				cout << "Tax on the bus is " << round((hp * 5 * (time1 / 12)) * 10) / 100 << "\t Number of your bus is " << number;
+				cout << "Tax on the bus is " < hp * 5 * (time1 / 12) << "\t Number of your bus is " << number;
 			}
 			else {
-				cout << "Tax on the bus is " << round((hp * 10 * (time1 / 12)) * 10) / 100 << "\t Number of your bus is " << number;
+				cout << "Tax on the bus is " << hp * 10 * (time1 / 12) << "\t Number of your bus is " << number;
 			}
 		}
 		else {
@@ -185,13 +185,13 @@ public:
 	void Calculation() override {
 		if (time1 < 12) {
 			if (hp <= 20) {
-				cout << "Tax on your bike is " << round((hp * 1 * (time1 / 12)) * 10) / 100 << "\t There are " << wheels << " wheels on your bike";
+				cout << "Tax on your bike is " << hp * 1 * (time1 / 12) << "\t There are " << wheels << " wheels on your bike";
 			}
-			else if (hp > 20 || hp <= 35) {
-				cout << "Tax on your bike is " << round((hp * 2 * (time1 / 12)) * 10) / 100 << "\t There are " << wheels << " wheels on your bike";
+			else if (hp > 20 && hp <= 35) {
+				cout << "Tax on your bike is " << hp * 2 * (time1 / 12)<< "\t There are " << wheels << " wheels on your bike";
 			}
 			else {
-				cout << "Tax on your bike is " << round((hp * 5 * (time1 / 12)) * 10) / 100 << "\t There are " << wheels << " wheels on your bike";
+				cout << "Tax on your bike is " << hp * 5 * (time1 / 12)<< "\t There are " << wheels << " wheels on your bike";
 			}
 		}
 		else {
@@ -226,20 +226,22 @@ public:
 
 int main() {
 	string Brand;
-	int hp, number, time1, option, wheels, qm;
+	int hp, number, time1, option, wheels, qm, owning;
 	float price;
 	cout << "Enter 1 calculate tax on your car, 2 tax on a bus, 3 tax on your motorcycle, 4 tax on your plane >";
 	cin >> option;
 	if (option == 1) {
 		cout << "Enter horse power of your car > ";
 		cin >> hp;
-		cout << "Enter price of your car(milions) > ";
+		cout << "Enter price of your car(millions) > ";
 		cin >> price;
 		cout << "Enter months of your owning > ";
 		cin >> time1;
 		cout << "Enter car's brand > ";
 		cin >> Brand;
-		Auto auto1(hp, Brand, price, time1);
+		cout << "How old is your car, enter this value (months)";
+		cin >> owning;
+		Auto auto1(hp, Brand, price, time1, owning);
 		auto1.Calculation();
 	}
 	else if (option == 2) {

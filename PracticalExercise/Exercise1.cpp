@@ -64,7 +64,7 @@ public:
 private:
     int rows;
     int cols;
-    **array;
+    int **array;
 };
 
 //Main function
@@ -77,12 +77,14 @@ int main()
     arr.ShowCommon();
     cout << "Now transposed:" << endl;
     arr.ShowTransposed();
+    arr.destructArray();
     Massive arrB(3, 3);
     arrB.generate2DimensionalArray();
     cout << "Common matrix:" << endl;
     arrB.ShowCommon();
     cout << "Now transposed:" << endl;
     arrB.ShowTransposed();
+    arrB.destructArray();
 
     return 1;
 }

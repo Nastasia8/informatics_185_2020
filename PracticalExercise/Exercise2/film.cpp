@@ -11,6 +11,16 @@ void Film::ShowMarks()
     cout << endl;
 }
 
+string Film::getName()
+{
+    return name;
+}
+
+float Film::getAvRating()
+{  
+    return av_rating;
+}
+
 //Show parameters of the class Film
 void Film::ShowData()
 {   
@@ -48,7 +58,7 @@ string Film::setName()
 }
 
 //Setting marks with help of user input
-int Film::setMarks()
+void Film::setMarks()
 {
     cout << "Marks of the film: ";
     marks = new int[3];

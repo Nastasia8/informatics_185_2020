@@ -20,10 +20,12 @@ public:
     void ShowMarks();
     void ShowData();
     void ShowAvRating();
+    float getAvRating();
+    string getName();
 private:
     //Private functions outside the class
     int setYear();
-    int setMarks();
+    void setMarks();
     string setName();
     //Private parameters
     string name;

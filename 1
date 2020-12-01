@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+void F (int *a, int *b, int *c)
+{
+    *(a) +=1;
+    *(b) +=1;
+    *(c) +=1;
+    cout<< *a <<endl;
+    cout<< *b <<endl;
+    cout<< *c <<endl;
+}
+
+int main()
+{
+    int a = 0;
+    int b = 1;
+    int c = 2;
+    int *pa = &a;
+    int *pb = &b;
+    int *pc = &c;
+    F (pa, pb, pc);
+    return 0;
+}

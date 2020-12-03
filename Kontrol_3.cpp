@@ -1,0 +1,69 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int rows=3;
+    int col=4;
+   int arr[rows][col];
+   int *arrmin= new int[col];
+   int *arrp= new int[rows];
+   for (int i=0; i<rows;i++)
+   {
+       for (int j=0; j<col; j++)
+       {
+           arr[i][j]=rand()%20;
+            cout<<arr[i][j]<<"\t";
+            
+       }
+       cout<<endl;
+   }
+       int min;
+       for (int j=0; j<col; j++)
+       {
+           min=arr[0][j];
+           for (int i=0; i<rows;i++)
+           {
+               if (arr[i][j]<min)
+               min=arr[i][j];
+               arrmin[j]=min;
+           }
+           cout<<endl;
+       }
+       for (int i=0; i<rows;i++)
+   {       
+       for (int j=0; j<col; j++)
+       {
+           if (arr[i][j]==arrmin[j])
+           arr[i][j]=1;
+       }
+   }
+   for (int i=0; i<rows;i++)
+   {       
+       for (int j=0; j<col; j++)
+       { cout<<arr[i][j]<<"\t";
+       }
+       cout<<endl;
+       
+   }
+   int p;
+   for (int i=0; i<rows;i++)
+   {       
+    p=1; 
+    for (int j=0; j<col; j++)
+       {
+           p=p*arr[i][j];
+       }
+       arrp[i]=p;
+   }
+   cout<<endl;
+   for (int j=0; j<col; j++)
+   {
+       cout<<arrmin[j]<<endl;
+   }
+   cout<<endl;
+   for (int i=0; i<rows;i++)
+   {
+       cout<<arrp[i]<<endl;
+   }
+}

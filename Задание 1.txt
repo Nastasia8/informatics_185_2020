@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+float Cena1 (int k1, float price1)
+{
+    float y;
+    y=k1*price1;
+    return y;
+}
+float Summacen (float x1, float x2)
+{
+    float z;
+z=x1+x2;
+return z;
+}
+int main()
+{
+float z;
+int k1=5;
+float price1=98.57;
+float x1;
+float x2;
+x1=k1*price1;
+cout << "x1= " << x1 << endl;
+int k2=9;
+float price2=38.57;
+x2=k2*price2;
+cout << "x2= " << x2 << endl;
+cout << "Cena shokoladok= " << Cena1 (k1,price1) << endl;
+cout << "Summa cen= " << Summacen (x1,x2) << endl;
+return 0;
+}

@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    int s;
+    int k = 0;
+    cout << "Input s = ";
+    cin >> s;
+    for (int n=0; n<=s; n++)
+    k += pow(-1,n+1)+pow(n+1,n-1);
+    cout << " k = " << k << endl;
+    
+    return 0;
+}

@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b,i,j;
+    cin >> a;
+    cin >> b;
+    int arr [i][j];
+    for (i=0; i<a; i++)
+      for (j=0; j<b; j++){
+      arr [i][j] = 1 + rand() % 100;
+      cout << arr[i][j] << endl;
+      }
+    return 0;
+}

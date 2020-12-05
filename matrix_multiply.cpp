@@ -9,10 +9,20 @@ void multiply(int** matrix1, int** matrix2, int r, int c, int row, int col) {
 			for (int z = 0; z < c; z++) {
 				result += matrix1[i][z] * matrix2[z][j];
 			}
-			cout << result << endl;
+			cout << result << "\t";
 			result = 0;
 		}
+		cout << endl;
 	}
+}
+
+void Clear(int** matrix1, int** matrix2, int r, int row) {
+    for (int i =0; i < r; i++) {delete[] matrix1[i];}
+    delete[] matrix1;
+    
+    
+    for (int i = 0; i < row; i++) {delete[] matrix2[i];}
+    delete[] matrix2;
 }
 
 
@@ -51,10 +61,11 @@ int main() {
 		}
 		cout << endl;
 	}
-
+	cout << "---------------------------------------------------------------" << endl;
 	if (c == row) {
 		multiply(matrix1, matrix2, r, c, row, col);
 	}
+	Clear(matrix1, matrix2, r, row);
 
 	return 0;
 }

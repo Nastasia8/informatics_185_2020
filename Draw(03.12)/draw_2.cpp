@@ -8,6 +8,7 @@ public:
     {
         this->x = x;
     }
+    virtual void draw() = 0;
 
 protected:
     char x;
@@ -15,6 +16,13 @@ protected:
 class PriTreugol : public Figur
 {
 public:
+    void draw()
+    {
+        up();
+        cout << endl;
+        down();
+        cout << endl;
+    };
     PriTreugol(char x) : Figur(x)
     {
     }
@@ -44,7 +52,7 @@ public:
     void down()
     {
         int l;
-
+        cout << endl;
         cout << "Vedi dlinu gipotenuzi: ";
         cin >> l;
         for (int i = 0; i < l; i++)
@@ -69,7 +77,10 @@ class Kvadrat : public Figur
 {
 public:
     Kvadrat(char x) : Figur(x)
-    { //  В конструкторе лучше так не делать? Просто не хочестся нагромождать методами
+    {
+    }
+    void draw() override
+    {
         int l;
         int k;
         cout << "Vedi storonu kvadrata: ";
@@ -100,6 +111,10 @@ class Priamugolnik : public Figur
 public:
     Priamugolnik(char x) : Figur(x)
     {
+    }
+    void draw() override
+    {
+
         int a, b;
         cout << "Vedi dlinu: ";
         cin >> a;
@@ -133,6 +148,10 @@ class Romb : public Figur
 public:
     Romb(char x) : Figur(x)
     {
+    }
+    void draw() override
+    {
+
         int a;
         int y = 1;
 
@@ -184,13 +203,36 @@ public:
         cout << x << endl;
     }
 };
+class Otrezok : public Figur
+{
+public:
+    Otrezok(char x) : Figur(x)
+    {
+    }
+    void draw() override
+    {
+        int l;
+        cout << " Vedi dlinu otrezka: ";
+        cin >> l;
+        for (int i = 0; i < l; i++)
+        {
+            cout << x;
+        }
+        cout << endl;
+    }
+};
 int main()
 {
     Romb q(42);
+    q.draw();
     Priamugolnik e(42);
+    e.draw();
     Kvadrat s(42);
+    s.draw();
     PriTreugol x(42);
     x.down();
     x.up();
+    Otrezok c(42);
+    c.draw();
     return 0;
 }

@@ -44,22 +44,22 @@ public:
     void down()
     {
         int l;
-        int k = 3;
+
         cout << "Vedi dlinu gipotenuzi: ";
         cin >> l;
-        for (int i = 0; i < l + 1; i++)
+        for (int i = 0; i < l; i++)
         {
             cout << x;
         }
         cout << endl;
-        for (int i = 0; i < l - 1; i++)
+        for (int i = 0; i < l + 1; i++)
         {
             cout << x;
-            for (int j = 0; j < k; j++)
+            for (int j = 0; j < l - 3; j++)
             {
                 cout << " ";
             }
-            k -= 1;
+            l -= 1;
             cout << x << endl;
         }
         cout << x << endl;

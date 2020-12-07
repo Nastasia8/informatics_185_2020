@@ -1,11 +1,12 @@
-﻿#include <iostream>
+#include <iostream>
 #include <string>
 using namespace std;
 
 class Animals {
-public:
+protected:
 	string name, voice, color;
 	int age;
+public:
 	Animals(string name, string voice, string color, int age) {
 		this->name = name;
 		this->voice = voice;
@@ -13,23 +14,20 @@ public:
 		this->age = age;
 	}
 	virtual void Show() = 0;
-	virtual string getName() = 0;
-	virtual string Speak() = 0;
+	string getName() {
+		return name;
+	}
+	string Speak(){
+		return voice;
+	}
 };
 
 class Cat : public Animals {
-public:
+protected:
 	string eyecolor;
+public:
 	Cat(string name, string voice, string color, int age, string eyecolor):Animals(name, voice, color, age) {
 		this->eyecolor = eyecolor;
-	}
-
-	string Speak() override {
-		return voice;
-	}
-
-	string getName() override {
-		return name;
 	}
 
 	void Show() override {
@@ -39,18 +37,11 @@ public:
 };
 
 class Dog : public Animals {
-public:
+protected:
 	string breed;
+public:
 	Dog(string name, string voice, string color, int age, string breed) :Animals(name, voice, color, age) {
 		this->breed = breed;
-	}
-
-	string Speak() override {
-		return voice;
-	}
-
-	string getName() override {
-		return name;
 	}
 
 	void Show() override {
@@ -59,18 +50,11 @@ public:
 };
 
 class Racoon : public Animals {
-public:
+protected:
 	bool answer;
+public:
 	Racoon(string name, string voice, string color, int age, bool answer) :Animals(name, voice, color, age) {
 		this->answer = answer;
-	}
-
-	string Speak() override {
-		return voice;
-	}
-
-	string getName() override {
-		return name;
 	}
 
 	void Show() override {
@@ -79,13 +63,14 @@ public:
 };
 
 class Person {
-public:
+protected:
 	string name;
+public:
 	Person(string name) {
 		this->name = name;
 	}
 	void ShowPet(Animals *pet) {
-		cout << name << " has " << pet->getName();
+		cout << name << " has a pet which name is " << pet->getName();
 	}
 };
 

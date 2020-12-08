@@ -1,0 +1,23 @@
+¢Ú
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+float a,d,x ;
+cout<<"input a=";
+cin>>a;
+cout<<"input d=";
+cin>>d;
+cout<<"input x=";
+cin>>x;
+if(x==0)
+{
+    cout<<"!!!!!!"<<endl;
+}
+else
+std::cout <<"="<<(4-a)+(((d*pow(4,d))/(5*x)))<< std::endl;
+
+    return 0;
+}

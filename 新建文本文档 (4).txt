@@ -1,0 +1,21 @@
+¢Û
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+float a,d;
+cout<<"input a=";
+cin>>a;
+cout<<"input d=";
+cin>>d;
+if(a==0)
+{
+    cout<<"!!!!!!"<<endl;
+}
+else
+std::cout <<"="<<(pow(d,5))+(pow(a,5))-((pow(4,d)+pow(5,a))/(2-pow(3,a)-1))<< std::endl;
+
+    return 0;
+}

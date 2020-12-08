@@ -1,0 +1,23 @@
+¢Ù
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+float a,b,y ;
+cout<<"input a=";
+cin>>a;
+cout<<"input b=";
+cin>>b;
+cout<<"input y=";
+cin>>y;
+if(y==4)
+{
+    cout<<"!!!!!!"<<endl;
+}
+else
+std::cout <<"="<<((a*b)/4-y)+(7*a)  << std::endl;
+
+    return 0;
+}

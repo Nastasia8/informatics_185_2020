@@ -1,0 +1,86 @@
+#include <iostream>
+#include <random>
+using namespace std;
+
+void f(int rows,int col,int **massiv){
+ srand( time(0) );
+ for ( int i=0; i < rows; i++)
+    for ( int j=0; j < col; j++)
+       massiv[i][j]= rand() % 30;
+       
+}
+void f2(int rows,int col,int **massiv){
+for  ( int i=0; i < rows; i++){
+   for ( int j=0; j < col; j++)
+       cout << massiv[i][j] << "\t";
+    cout << endl;
+}
+}
+
+void f3(int rows, int col,int n,int **massiv){
+for  ( int i=0; i < rows; i++){
+   for ( int j=0; j < col; j++){
+       if (massiv[i][j] > n){
+         n=massiv[i][j];
+         
+       }
+   }
+    
+    }
+cout << "maximum of all elements = " << n <<endl;
+n=0;
+}
+void f4 (int rows,int col,int n, int **massiv,int *arr){
+for  ( int i=0; i < rows; i++){
+   for ( int j=0; j < col; j++){
+       if (massiv[i][j] > n){
+         n=massiv[i][j];
+         
+       }
+       
+   }
+    cout << "maximum from string = " << n <<endl;
+    arr[i]=n;
+       n=0;
+    }
+}
+void f5(int rows,int *arr){
+for(int i=0; i < rows; i++)
+{
+  cout << arr[i] <<"\t";
+}
+}
+
+
+int main() {
+  int n=0;
+  int rows;
+  int col;
+  
+  cout << "rows = ";
+  cin >> rows;
+
+  cout << "col = ";
+  cin >> col;
+
+int *arr = new int [rows];
+
+ int **massiv = new int *[rows];
+ for (int i=0; i<rows;i++)
+ massiv[i]=new int [col];
+
+f(rows,col,massiv);
+f2(rows,col,massiv);
+f3( rows, col,n,massiv);
+f4 (rows, col,n,massiv,arr);
+
+cout <<endl;
+cout << "array with maximum values --> " <<endl;
+
+f5 ( rows, arr);
+
+for  ( int i=0; i < rows; i++)
+   delete [] massiv[i];
+   delete [] massiv;
+delete [] arr;
+}

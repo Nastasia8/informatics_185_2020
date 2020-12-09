@@ -96,7 +96,7 @@ void proizv (int r,int c,int rows,int cols,int **arr1,int **arr2);
            
             for (int k = 0; k < c; k++)
             {
-                proizved[i][j]+=(arr1[i][k]*arr2[k][j]);
+                proizved[i][j]+=arr1[i][k]*arr2[k][j];
             }
             
         } 

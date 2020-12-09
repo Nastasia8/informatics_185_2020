@@ -22,7 +22,7 @@ void proizv (int r,int c,int rows,int cols,int **arr1,int **arr2);
             arr1[i]= new int [c];
         }
     int **arr2= new int* [rows];
-        for (int i = 0; i < r; i++)
+        for (int i = 0; i < rows; i++)
         {
             arr2[i]= new int [cols];
         }
@@ -69,7 +69,7 @@ void proizv (int r,int c,int rows,int cols,int **arr1,int **arr2);
      return 0;
  }
 
- void proizv (int r,int c,int rows,int cols,int **arr1,int **arr2) {
+ void proizv (int r,int c,int cols,int rows,int **arr1,int **arr2) {
     
 
     int **proizved = new int* [r];

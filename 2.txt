@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+int product(float x,float y)
+{
+    return x*y;
+}
+int sum(float x,float y)
+{
+    return x+y;
+    
+}
+int difference(float x,float y)
+{
+    return x-y;
+}
+
+void quotient(float x,float y)
+{  
+    if(y==0)
+{
+    cout<<"!!!!"<<endl;
+}
+else
+    cout <<"quotient ="<<x/y  << endl;
+}
+
+int main()
+{
+    float x, y;
+    cin>>x;
+    cin>>y;
+
+    cout << "difference = " << difference(x,y) << endl;
+     quotient(x,y);
+     cout <<"sum="<<sum(x,y);
+     cout<<"product ="<<product(x,y);
+    return 0;
+}

@@ -1,0 +1,33 @@
+#include <iostream>
+ 
+using namespace std;
+
+void sum (float a, float b){
+ cout << "сумма="<< a+b << endl;    
+} 
+// float delenie (float a,float b){
+//     if b==0
+//       return 0;
+//       else return a/b;
+// }
+void delenie1 (float a,float b){
+    if b==0 
+      cout << "Деление на 0" << endl;
+      else cout << "a/b=" << a/b;
+}
+void razn (float a, float b){
+    cout << "разница="<< a-b << endl;
+}
+int main()
+{
+    int x, y;
+    cout << "введите x: ";
+    cin >> x;
+    cout << "введите y: ";
+    cin >> y;
+    sum (x,y);
+    // cout << "delenie" << delenie (x,y) << endl;
+    razn (x,y);
+    delenie1 (x,y);
+    return 0;
+}

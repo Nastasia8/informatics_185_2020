@@ -12,10 +12,10 @@ virtual void p()=0;
 
 class Triangle : public Figure {
 private: 
-int a,b,c;
+float a,b,c;
 
 public:
-Triangle (int a, int b, int c){
+Triangle (float a, float b, float c){
 this->a=a;
 this->b=b;
 this->c=c;
@@ -34,10 +34,10 @@ void p() override
 };
 
 class Rectangle : public Figure {
-int a,b,c,d;
+float a,b,c,d;
 
 public:
-Rectangle (int a, int b, int c, int d){
+Rectangle (float a, float b, float c, float d){
 this->a=a;
 this->b=b;
 this->c=c;
@@ -57,10 +57,10 @@ void p () override {
 };
 
 class Trapezoid : public Figure {
-int a,b,c,d,h;
+float a,b,c,d,h;
 
 public:
-Trapezoid (int a, int b,int c, int d,int h){
+Trapezoid (float a, float b,float c, float d,float h){
 this->a=a;
 this->b=b;
 this->c=c;

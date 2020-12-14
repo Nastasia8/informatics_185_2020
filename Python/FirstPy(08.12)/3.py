@@ -14,7 +14,10 @@ def schet(x, y):
     if p == 2:
         print(x*y)
     if p == 3:
-        print(x/y)
+        try:
+            print(x/y)
+        except:
+            print('Error. Delenie na 0')
     if p == 4:
         print(x-y)
     if p == 5:

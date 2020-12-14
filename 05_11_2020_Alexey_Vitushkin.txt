@@ -1,0 +1,49 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Person{
+protected:
+string name;
+int age;
+public:
+Person (string name,int age){
+this-> name =name;
+this-> age = age;
+}
+void show(){
+cout«"name "«name«endl;
+cout«"age "«age«endl;
+}
+};
+class Teacher: public Person{
+int colvoClassov;
+public:
+Teacher(string name, int age, int colvoClassov): Person(name, age){
+this->colvoClassov=colvoClassov;
+}
+void colvoClass(){
+cout«"Teacher"«endl;
+cout«"colvoClassov = "«colvoClassov«endl;
+}
+};
+class Student: public Person{
+int group;
+public:
+Student(string name, int age, int group): Person (name, age){
+this-> group=group;
+}
+void groupm(){
+cout«"Student"«endl;
+cout«"group = "«group«endl;
+}
+};
+int main() {
+Teacher Ekaterina("Ekaterina",32,4);
+Ekaterina.show();
+Ekaterina.colvoClass();
+cout «endl;
+Student Alexey("Alexey",18,185);
+Alexey.show();
+Alexey.groupm();
+}

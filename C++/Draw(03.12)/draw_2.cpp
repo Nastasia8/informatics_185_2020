@@ -16,7 +16,7 @@ protected:
 class PriTreugol : public Figur
 {
 public:
-    void draw()
+    void draw() override
     {
         up();
         cout << endl;
@@ -221,6 +221,80 @@ public:
         cout << endl;
     }
 };
+class RavnobedrTreug : public Figur
+{
+public:
+    RavnobedrTreug(char x) : Figur(x)
+    {
+    }
+    void draw() override
+    {
+
+        int l, k, p, t;
+        cout << "Vedi dlinu osnovania (ravnobedr. treugol.): ";
+        cin >> l;
+        if (l % 2 == 0)
+        {
+            k = (l / 2) - 1;
+            t = k;
+            p = 0;
+            if (l % 2 == 0)
+
+                for (int j = 0; j < t; j++)
+                {
+                    for (int i = 0; i < k; i++)
+                    {
+                        cout << " ";
+                    }
+                    cout << x;
+                    for (int f = 0; f < p; f++)
+                    {
+                        cout << " ";
+                    }
+                    cout << x << endl;
+                    k--;
+                    p += 2;
+                }
+            for (int i = 0; i < l; i++)
+            {
+                cout << x;
+            }
+        }
+        else
+        {
+            k = l / 2 - 1;
+            p = l / 2 - 1;
+
+            t = 1;
+            for (int i = 0; i < k + 1; i++)
+            {
+                cout << " ";
+            }
+
+            cout << x << endl;
+            for (int i = 0; i < p; i++)
+            {
+                for (int o = 0; o < k; o++)
+                {
+                    cout << " ";
+                }
+                cout << x;
+                for (int j = 0; j < t; j++)
+                {
+                    cout << " ";
+                }
+                cout << x << endl;
+                t += 2;
+                k--;
+            }
+            for (int i = 0; i < l; i++)
+            {
+                cout << x;
+            }
+            cout << endl;
+        }
+    }
+};
 int main()
 {
     Romb q(42);
@@ -234,5 +308,7 @@ int main()
     x.up();
     Otrezok c(42);
     c.draw();
+    RavnobedrTreug tr(42);
+    tr.draw();
     return 0;
 }

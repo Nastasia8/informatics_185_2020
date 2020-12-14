@@ -11,7 +11,10 @@ def calculating(x, y):
     elif choice==2:
         print(x*y)
     elif choice==3:
-        print(round(x/y, 2))
+        if (y != 0):
+            print(round(x/y, 2))
+        else:
+            print("Can't divide by 0")
     elif choice==4:
         print(x-y)
     elif choice==5:

@@ -1,0 +1,46 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+void Maytnik(float l,float m)
+{
+    cout << "Физик" << endl;
+    float T,w;
+    T = 2 * M_PI * sqrt (l/(9.8*m));
+    cout << "Период"<< T << endl;
+    w = 1/sqrt (l/m);
+    cout << "Частота"<< w << endl;
+}
+
+void Maytnik(float l)
+{
+    cout << "Математика" << endl;
+    float T,w;
+    T = 2 * M_PI * sqrt (l/9.8);
+    cout << "Период" << T << endl;
+    w = sqrt (9.8/l);
+    cout << "Частота" << w << endl;
+}
+
+void Maytnik(float m,float k,float pi)
+{
+    cout << "Пружина" << endl;
+    float T,w;
+    T = 2 * pi * sqrt (m/k);
+    cout << "Период" << T << endl;
+    w = sqrt (k/m);
+    cout << "Частота" << w << endl;
+}
+
+int main()
+{
+    float l,m,k;
+    float const pi=3.14;
+    cout << endl << "l ";cin >>l;
+    cout << endl << "mass ";cin >> m;
+    cout << endl << "k ";cin >> k;
+    Maytnik(m, k);
+    Maytnik(l);
+    Maytnik( m, k, pi);
+    return 0;
+}

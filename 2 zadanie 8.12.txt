@@ -1,0 +1,9 @@
+print 
+
+def math_mayatnik ():
+    g=9.8
+    L = float (input("Enter L: "))
+    result = round((2*math.pi*math.sqrt(L/g)),2)
+    print (result)
+
+math_mayatnik ()

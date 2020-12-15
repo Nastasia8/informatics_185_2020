@@ -1,0 +1,12 @@
+print
+
+def calculate_nechet ():
+    v= int (input("Сколько чисел вы хотите ввести ? "))
+    sum=0
+    for i in range (1, v+1):
+        value = int (input ())
+        if ((value%2)==1):
+            sum+=value
+    return sum
+
+print ("Сумма не четных чисел = " , calculate_nechet())

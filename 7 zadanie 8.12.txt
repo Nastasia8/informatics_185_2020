@@ -1,0 +1,16 @@
+print 
+
+def uravneniye ():
+     x = float (input ("Введите x: " ))
+     y = float (input ("Введите y: " ))
+     z = float (input ("Введите z: " ))
+
+     if (y**2-4*x*z<0):
+        print ('Корней нет')
+     elif y**2-4*x*z==0:
+         print ("f= ", (-y/(2*x)))
+     else:
+         print ("f1=", (-y+math.sqrt(y**2-4*x*z))/(2*x))
+         print ("f2=", (-y-math.sqrt(y**2-4*x*z))/(2*x))
+
+uravneniye()

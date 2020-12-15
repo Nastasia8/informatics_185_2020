@@ -1,0 +1,12 @@
+print
+
+P = float (input ("Введите P: " ))
+I = float (input ("Введите I: " ))
+m = float (input ("Введите m: " ))
+n = float (input ("Введите n: " ))
+
+def calc_stoimost():
+     S=round ((P*(1+(I/100)/(m/12))**(m/12*n)),1)
+     print ("Будущая стоимость вклада", S)
+
+calc_stoimost ()

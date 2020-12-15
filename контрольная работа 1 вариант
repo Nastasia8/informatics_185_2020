@@ -1,0 +1,55 @@
+2)
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+ float k,i,s;
+ cin >> k;
+ for (i=0; i<k; i++) {
+ s == (i + pow(2,i)) / ((4*i) + pow(5, 2*i));
+    }
+ cout << s << endl;
+
+ return 0;
+}
+
+4)
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+ int i,j,p,h;
+ cin >> i;
+ cin >> j;
+ p == i;
+ h == j;
+ int array [i][j];
+
+ int **a = int *[i];
+ for (int k; k<i; k++)
+ array[k] = new int [j];
+
+ for (i=0; i<p; i++)
+ for (j=0; j<h; j++)
+ array[i][j] = rand() % 100;
+
+ for (i=0; i<p; i++)
+ for (j=0; j<h; j++) {
+ if (i = j) 
+ for (j>0; j-1;)
+ array[i][j-1] * 2;
+
+    }
+
+ for (i=0; i<p; i++)
+ for (j=0; j<h; j++)
+ cout << array[i][j] << endl;
+
+ return 0;
+}

@@ -11,60 +11,83 @@ class Figure {
 };
 
 class Rectangle :public Figure {
-
+    private:
+    int a,b;
+    
     public:
+    Rectangle (int a,int b) {
+        this->a=a;
+        this->b=b;
+
+    }
+
     void show () override {
         cout<< "Rectangle:"<< endl;
         cout << endl;
-        for (int i = 0; i < 5; i++)
+        for(int i=1;i<=a;i++)
         {
-            cout << " ";
-            for (int j = 0; j < 6; j++)
+            for(int j=1;j<=b;j++)
             {
-                cout << "* ";
+            if ((i==1) or (j==1) or (i==a) or (j==b))cout<<"* ";
+            else cout<<"  ";
             }
-            cout << endl;
+            cout<<endl;
         }
-        cout << endl;
     }
-
 };
 
 class Square :public Figure {
+private:
+    int a;
+    
+    public:
+    Square (int a) {
+        this->a=a;
+       
 
-public:
+    }
+
     void show () override {
         cout<< "Square:"<< endl;
         cout << endl;
-        for (int i = 0; i < 7; i++)
+        for(int i=1;i<=a;i++)
         {
-            cout << " ";
-            for (int j = 0; j < 7; j++)
+            for(int j=1;j<=a;j++)
             {
-                cout << "* ";
+            if ((i==1) or (j==1) or (i==a) or (j==a))cout<<"* ";
+            else cout<<"  ";
             }
-            cout << endl;
+            cout<<endl;
         }
-        cout << endl;
     }
-    
-
 };
 class Isosceles_Triangle:public Figure {
-
+private:
+    int h;
+    
 public:
+    Isosceles_Triangle (int h) {
+        this->h=h;
+       
+
+    }
+
     void show () override {
         cout<< "Isosceles triangle:"<< endl;
         cout << endl;
-        for (int i = 0; i < 8; i++)
+        for (int i = 1; i <= h; i++)
         {   
-            cout << " ";
-            for (int j = 0; j < 8; j++)
+            
+            for (int j = 1; j <= h; j++)
             {   
-                if (i>=j)
+                if (i==j or j==1 or i==h)
                 {    
                     
-                    cout << "*";
+                    cout << "* ";
+                }
+                else
+                {
+                    cout << "  ";
                 }
                 
                 
@@ -77,24 +100,33 @@ public:
 };
 
 class Triangle:public Figure {
-
+private:
+    int h;
+    
 public:
+    Triangle (int h) {
+        this->h=h;
+       
+
+    }
     void show () override {
         cout<< "Triangle:"<< endl;
         cout << endl;
-        for (int i = 0; i < 6; i++)
+        for (int i = 1; i <= h; i++)
+        {
+            for (int j = 1; j <= h * 2; j++)
             {
-            for (int j = 1; j < 6 - i; j++)
-            {
-                cout << " ";
-            }   
-    
-            for (int j = 6 - 2 * i; j <= 6; j++)
-            {
-                cout << "*";
-            }           
-            cout << endl;
+                if (j == ((h + 1) - (i - 1)) or j == ((h + 1) + (i - 1)))
+                    cout << "* ";
+                else
+                    if (i == h and j > 1)
+                        cout << "* ";
+                    else
+                        cout << "  ";
             }
+    
+            cout << endl;
+        }
  
     }
          
@@ -103,34 +135,39 @@ public:
 };
 
 class Rhombus:public Figure {
-
+private:
+int digit;
 public:
+    Rhombus (int digit){
+        this->digit=digit;
+    }
     void show () override {
-        cout<< "Rhombus:"<< endl;
-        cout << endl;
-        int N = 11;
-        int center = N / 2;
-        for (int i = 0; i < N; i++)
-        {
-            for (int j = 0; j < N; j++)
+         cout<< "Rhombus:"<< endl;
+         cout << endl;
+         if (digit%2==1)
+         {
+             
+         
+         
+            
+            
+            for (int i = 0; i<digit; i++)
             {
-                if (i <= center)
+                for (int j = 0; j<digit; j++)
                 {
-                    if (j >= center - i && j <= center + i)
-                        cout << "*";
-                    else
-                        cout << " ";
-                }
+                if ( j == digit / 2 + i or j == digit / 2 - i or j == i - digit / 2 or j==digit-i+digit/2-1)
+                cout << "*";
                 else
-                {
-                    if (j >= center + i - N + 1 && j <= center - i + N - 1)
-                        cout << "*";
-                    else
-                        cout << " ";
+                cout << " ";
                 }
-        }
-        cout << endl;
-        }
+                cout << endl;
+            }
+         }
+         else
+         {
+             cout << "For rhombus should enter odd nubmber "<<endl ;
+         }
+            
     }
 
 };
@@ -149,19 +186,19 @@ void show () override{
 };
 
 int main (){
-    Rectangle hmm ;
+    Rectangle hmm (5,10);
     hmm.show();    
 
-    Square g;
+    Square g (10);
     g.show();
 
-    Isosceles_Triangle gd;
+    Isosceles_Triangle gd (5);
     gd.show();
 
-    Triangle asd;
+    Triangle asd(5);
     asd.show();
 
-    Rhombus asa;
+    Rhombus asa (15);
     asa.show();
 
     Risunok nadpis;

@@ -1,0 +1,20 @@
+print 
+
+def calculate () :  
+    x = float (input ("Введите x: " ))
+    y = float (input ("Введите y: " ))
+    what = input ("Введите операцию (+ , - , * , / , **)\n")
+    if what == "+": 
+         print ("x+y=", x+y)
+    elif what == "-" :
+         print ("x-y=", x-y)
+    elif what == "*" :
+         print ("x*y=", x*y)
+    elif what == "/" :
+         print ("x/y=", x/y)
+    elif what == "**" :
+         print ("x^y=", x**y)
+    else:
+         print ("Неизвестное действие")
+
+calculate()

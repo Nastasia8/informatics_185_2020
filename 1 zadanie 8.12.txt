@@ -1,0 +1,12 @@
+import math 
+print
+Tiger = "The tiger once ranged widely from the Eastern Anatolia Region in the west to the Amur River basin, and in the south from the foothills of the Himalayas to Bali in the Sunda islands."
+a=0
+s=0
+for b in Tiger :
+    if b == "a":
+        a+= 1
+    if b == "s":
+        s+= 1
+print ("Символов  a ", a)
+print ("Символов s " ,s)

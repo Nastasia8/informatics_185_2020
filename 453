@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int N = 3;
+    int M = 6;
+    int A[N][M];
+    int B[N];
+    int sum1;
+    for(int i = 0; i < N; i++)
+    {
+        for(int j =0; j < M; j++)
+        {
+            A[i][j]=rand() % 10;
+            cout << A[i][j] << "\t";
+        }
+        cout << endl;
+    }
+    int z;
+    cin >> z;
+    for(int i = 0; i < N; i++)
+    {
+        sum1 = 0;
+        for(int j =0; j < M; j++)
+        {
+            if( A[i][j] > z)
+            sum1 += A[i][j];
+        }
+        B[i] = sum1;
+    }
+}

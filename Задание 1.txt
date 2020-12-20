@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+  int k;
+  int n;
+  int sum=0;
+  cout<<"Vvedite k: = ";
+  cin>>k;
+  for( n=1; n<=k;n++){
+      sum=sum+n;}
+      cout<<"summa = "<<sum;
+ return 0;
+}

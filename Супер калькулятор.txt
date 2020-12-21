@@ -1,0 +1,38 @@
+import time
+
+print (" Здравствуйте!!!\n Это супер продвинутый калькулятор будущего поколения")
+
+time.sleep (1.5)
+
+x = float(input(" Введите x: "))
+y = float(input(" Введите y: "))
+result = str(input(" Выберите действие (+, -, *, /, //): "))
+ 
+if result == "+":
+    c = x+y
+    print(" Сумма: " + str(c))
+ 
+elif result == "-":
+    c = x-y
+    print(" Разность: " + str(c))
+ 
+elif result == "*":
+    c = x*y
+    print(" Произведение: " + str(c))
+    
+elif result == "//":
+    if x == 0 or y == 0:
+        print(" На ноль без остатка тоже не делиться!!!!!!!!! ")
+    else:    
+        c = x//y
+        print(" Частное без остатка: " + str(c))    
+ 
+elif result == "/":
+    if x == 0 or y == 0:
+        print(" На ноль не делиться!!!!!!!!! ")
+    else:
+        c = x/y
+        print(" Частное:" + str(c))
+        
+print(" До связи!!! ")  
+print(" Поставьте четверку пожалуйста................ ")

@@ -1,0 +1,8 @@
+D = int (input("Диапазон"))
+sum = 0
+for i in range (1, D + 1):
+        nechet = int (input ())
+        if ((nechet % 2) == 1):
+            sum = nechet + nechet
+    return sum
+print ("Сумма = ")

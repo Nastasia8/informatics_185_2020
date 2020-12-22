@@ -1,0 +1,16 @@
+print ("Здравствуйте, поставьте 26 баллов или 30 пожалуйста")
+x = float (input ("Любое, даже с запятой = "))
+y = float (input ("Аналогично = "))
+sign = input ("Круче китайцев: +, -, *, /, **: ")
+if sign == "+": 
+         print (x + y)
+elif sign == "-":
+         print (x - y)
+elif sign == "*":
+         print (x * y)
+elif sign == "/":
+         print (x / y)
+elif sign == "**":
+         print (x ** y)
+else:
+         print ("Так нельзя(")

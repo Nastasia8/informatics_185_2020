@@ -1,0 +1,15 @@
+S = float (input ("Сумма: "))
+C = float (input ("Ставка: "))
+P = float (input ("Проценты: "))
+G = float (input ("Года: "))
+S = round((S * (1 + (C / 100) / (P / 12)) ** (P / 12 * G)), 1)
+print ("Будущая сумма:", S)
+6
+D = int (input("Диапазон"))
+sum = 0
+for i in range (1, D + 1):
+        nechet = int (input ())
+        if ((nechet % 2) == 1):
+            sum = nechet + nechet
+    return sum
+print ("Сумма = ")

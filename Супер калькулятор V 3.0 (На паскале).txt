@@ -1,0 +1,20 @@
+program calcus;
+    uses crt;
+    var x,y,z:integer;
+    q:string;
+    begin
+        clrscr;
+    writeln('Введите x:');
+    readln(x);
+    writeln('Введите y:');
+    readln(y);
+    writeln('Введите знак:');
+    readln(q);
+    
+    if q=('+') then z:=x+y;
+        if q=('-') then z:=x-y;
+            if q=('*') then z:=x*y;
+                if q=('/') then z:=x div y;
+    writeln('Результат= ',z);
+    readln;
+    end.

@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Супер Калькулятор V 2.0", "Супер Калькулятор V 2.0\Супер Калькулятор V 2.0.pyproj", "{BE6313A0-24A9-4E81-B47B-2CCDA5366D24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE6313A0-24A9-4E81-B47B-2CCDA5366D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE6313A0-24A9-4E81-B47B-2CCDA5366D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8708D23-C1FE-4E3D-85BD-D7A6C9BCD774}
+	EndGlobalSection
+EndGlobal

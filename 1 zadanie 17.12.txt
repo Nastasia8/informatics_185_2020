@@ -1,0 +1,23 @@
+from math import sqrt,log,fabs
+a=1.35
+b=0.98
+xn=1.14
+xk=4.24
+deltaX=0.62
+f = open('rezult.txt', 'a')
+def funkA(a,b,xn,xk,deltaX):
+    x=xn
+    y=0
+    while x < xk:
+        y=((pow((a*x+b),1/3))/pow((log10(x),2))
+        x=x+deltaX
+        f.write("funk A --> "+ str(y)+"\n")
+funkA(a,b,xn,xk,deltaX)
+spisok=(1.9,2.15,2.34,2.73,3.16)
+
+def funkB(spisok):
+    for x in spisok:
+        y=((pow((a*x+b),1/3))/pow((log10(x),2))
+        f.write("funk B --> "+ str(y)+"\n")
+funkB(spisok)
+f.close()

@@ -1,0 +1,13 @@
+class Animal:
+    def __init__(self, name, breed, age):
+        self.name = name
+        self.breed = breed
+        self.age = age
+cat = Animal("Пушок", "Мейн-кун", "15")
+print(cat.name + " - " + cat.breed + ", ему " + cat.age + " " + "года.")
+
+dog = Animal("Чернышка", "Колли", "2")
+print(dog.name + " - " + dog.breed + ", ей " + dog.age + " " + "года." )
+
+racoon = Animal("Генри", "Обычный городской", "3")
+print(racoon.name + " - " + racoon.breed + ", ему " + racoon.age + " " + "года.")

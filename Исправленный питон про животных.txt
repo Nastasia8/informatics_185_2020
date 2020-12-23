@@ -1,0 +1,15 @@
+class Animal:
+    def __init__(self, name, breed, age, voice):
+        self.name = name
+        self.breed = breed
+        self.age = age
+        self.voice = voice
+        
+cat = Animal("Пушок", "Мейн-кун", "15", "Мяу!")
+print(cat.name + " - " + cat.breed + ", ему " + cat.age + " " + "года." + "Он говорит " + cat.voice)
+
+dog = Animal("Чернышка", "Колли", "2", "Гав!")
+print(dog.name + " - " + dog.breed + ", ей " + dog.age + " " + "года." + "Она говорит " + dog.voice )
+
+racoon = Animal("Генри", "Обычный городской", "3", "Фррр!")
+print(racoon.name + " - " + racoon.breed + ", ему " + racoon.age + " " + "года." + "Он говорит " + racoon.voice)

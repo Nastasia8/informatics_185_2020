@@ -1,0 +1,16 @@
+import math
+
+Predlozenie = "The tiger once ranged widely from the Eastern Anatolia Region in the west to the Amur River basin, and in the south from the foothills of the Himalayas to Bali in the Sunda islands."
+print (Predlozenie)
+a = 0
+b = 0
+for x in Predlozenie:
+    if x == "a":
+        a += 1
+    if x == "s":
+        b += 1
+print ("\n", a, '"a"')
+print ("\n", b, '"b"')
+
+
+

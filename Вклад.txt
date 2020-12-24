@@ -1,0 +1,10 @@
+
+P = float (input (" Сумма вклада: "))
+I = float (input (" Процентная ставка: "))
+m = float (input (" Количество начислений процентов в год: "))
+n = float (input (" Количество лет: "))
+def calculateS():
+     S = round((P * (1 + (I / 100) / (m / 12)) ** (m / 12 * n)), 1)
+     print (" Будущая стоимость вклада: ", S)
+calculateS()
+

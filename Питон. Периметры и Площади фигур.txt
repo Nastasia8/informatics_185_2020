@@ -1,0 +1,72 @@
+import math
+print ("ПРЯМОУГОЛЬНИК")
+print ("P")
+sideX = float(input("Длина: "))
+sideY = float(input("Ширина: "))
+
+P = ((sideX + sideY) * 2);
+
+print("Периметр прямоугольника = ", P)
+print ("S")
+sideX = float(input("Длина: "))
+sideY = float(input("Ширина: "))
+
+S = (sideX * sideY);
+
+print("Площадь прямоугольника = ",S)
+
+print("\n")
+print ("ТРАПЕЦИЯ")
+print ("P")
+sideA = float(input("Сторона А: "))
+sideB = float(input("Сторона Б: "))
+sideC = float(input("Сторона В: "))
+sideD = float(input("Сторона Г: "))
+
+P = (sideA + sideB + sideC + sideD)
+
+print("Периметр трапеции = ", P)
+print ("S")
+sideA = float(input("Сторона А: "))
+sideB = float(input("Сторона Б: "))
+H = float(input("Высота: "))
+
+S = (sideA+sideB/2*H)
+
+print("Площадь трапеции = ", S)
+
+print("\n")
+print ("ТРЕУГОЛЬНИК")
+print ("P")
+sideA = float(input("Сторона А: "))
+sideB = float(input("Сторона Б: "))
+sideC = float(input("Сторона В: "))
+
+P = (sideA + sideB + sideC)
+
+print("Периметр треугольника = ", P)
+print ("S")
+
+sideA = float(input("Основание: "))
+H = float(input("Высота: "))
+
+S = ((sideA*H)/2)
+
+print("Площадь треугольника = ", S)
+
+print("\n")
+print ("КРУГ")
+print ("P")
+R = float(input("Радиус: "))
+
+P = (2*3.14*R)
+
+print("Периметр круга = ", P)
+print ("S")
+
+R = float(input("Радиус: "))
+
+S = (3.14*R**2)
+
+print("Площадь круга = ", S)
+

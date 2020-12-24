@@ -1,0 +1,16 @@
+
+ 
+class Car:
+ 
+    def __init__(self, color, model, price):
+        self.color = color
+        self.model = model
+        self.price = price
+     
+ 
+    def __str__(self):
+        return self.model + ": " + self.color + ", " + self.price + "млн рублей."
+ 
+car = Car("Черная", "BMW", " 1 ")
+print(str(car))
+    

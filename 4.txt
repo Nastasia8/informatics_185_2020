@@ -1,23 +1,23 @@
+
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 
 int main()
 {
-    float x,y,b;
+    float x,y,z;
     cout<<"input x=";
     cin>>x;
     cout<<"input y=";
     cin>>y;
-    cout<<"input b=";
-    cin>>b;
-    if((b==1)||(y==0))
+    cout<<"input z=";
+    cin>>z;
+    if((z==1))
     {
         cout<<"wrong<<endl";
     }
     else
-      std::cout << (pow(3,x)-pow(5,(x+7))/(b-1))-x*(10/y) << std::endl;
+      std::cout << (x-y)/(z-1) << std::endl;
     ;
 
     return 0;
